@@ -1,0 +1,130 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ahora empieza la parte de login y register */
+
+.body-login-register{
+    background-color:#B7D0E7 ;
+    color: white;
+}
+
+.login-register{
+    background-color: rgb(2 132 199);
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.login-register h3{
+    padding-bottom: 14px;
+    border-bottom: 1px solid white;
+}
+
+form .estilo{
+    margin: 30px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+::placeholder{
+    border-bottom: 1px solid white;
+}
+
+.estilo input{
+    color: white;
+    padding-left: 100px;
+    padding-right: 100px;
+    height: 60px;
+    font-size: 15px;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+input[type="submit"]{
+    background-color: transparent;
+    color: white;
+    margin-bottom: 15px;
+    width: 90%;
+    height: 50px;
+    border: 1px solid;
+    border-radius: 25px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
+    width: 90%;
+    height: 50px;
+    border: 1px solid;
+    border-radius: 25px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: rgb(6 182 212);
+    color: white;
+}
+
+
+/* ahora empieza la parte principal*/
+
+.body-all{
+    background-color: #B7D0E7;
+    max-width: 100vw;
+}
+
+.menu-item{
+    display: block;
+	padding: 1em;
+	color: white;
+	text-decoration: none;
+}
+
+.menu-item:hover{
+	border-right: 5px solid #3bba9c;
+}
+
+.bg-transp{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.bg-transp2{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+
+textarea{
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: transparent;
+    resize: none;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+textarea input{
+    border: none;
+}
+
+textarea::placeholder{
+    border: none;
+}
+
+
+
+form .estilo-add{
+    margin: 20px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.estilo-add input{
+    color: white;
+    height: 60px;
+    font-size: 15px;
+    background: none;
+    border: none;
+    outline: none;
+}
+

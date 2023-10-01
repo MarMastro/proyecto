@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="elPlan.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>El Plan de la Mariposa - Tours</title>
+</head>
+<body class="body-all bg-cover bg-no-repeat">
+    <nav class="flex items-center justify-between flex-wrap bg-neutral-950 p-2 shadow-2xl">
+        <div>
+            <img class="w-1/3" src="logo.jpg" alt="Logo">  
+        </div>
+        <div class="block contents sm:hidden">
+            <button id="boton" class="flex items-center px-3 py-2 border rounded text-white border-white">
+                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+            </button>
+        </div>
+        <div id="menu" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+            <div class="text-base lg:flex-grow">
+              <a href="index.html" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-cyan-500 mr-4">
+                  Inicio
+              </a>
+              <a href="add-album.html" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-cyan-500 mr-4">
+                  Agregar Album
+              </a>
+              <a href="tours.html" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-cyan-500 mr-4">
+                  Fechas
+              </a>
+              <a href="login.html" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-cyan-500">
+                  Cerrar Sesión
+              </a>
+            </div>
+        </div>
+    </nav>
+    <div class="pl-4 pt-1">
+        <h1 id="bienvenido" class="font-medium text-white text-2xl text-center sm:text-justify sm:text-black"></h1>
+    </div>
+        <div class="flex flex-col justify-around items-center m-auto pt-4">
+            <div class="items-center text-center bg-cyan-500 text-white text-2xl mb-2 p-2 w-full">
+            <p>Entradas para la gira 2023</p>
+            </div>
+            <div class="gap-32 items-center text-center bg-sky-600 text-white border-solid  w-1/2 pt-1.5 py-1.5">
+                <p>15 de Septiembre</p>
+                <p>Tandil - Argentina</p>
+                <button class="concert-button" data-location="Tandil - Argentina" data-variable="septiembre15" onclick="getTickets(this)">Tickets</button>
+            </div>
+            <div class="gap-32 items-center text-center bg-sky-600 text-white border-solid w-1/2 mt-5 py-1.5">
+                <p>16 de Septiembre</p>
+                <p>Mar del Plata - Argentina</p>
+                <button class="concert-button" data-location="Mar del Plata - Argentina" data-variable="septiembre16" onclick="getTickets(this)">Tickets</button>
+            </div>
+            <div class=" gap-32 items-center text-center bg-sky-600 text-white border-solid w-1/2 mt-5 py-1.5">
+                <p>23 de Septiembre</p>
+                <p>Rosario - Argentina</p>
+                <button class="concert-button" data-location="Rosario - Argentina" data-variable="septiembre23" onclick="getTickets(this)">Tickets</button>
+            </div>
+            <div class="gap-32 items-center text-center bg-sky-600 text-white border-solid  w-1/2 mt-5 py-1.5">
+                <p>30 de Septiembre</p>
+                <p>Montevideo - Uruguay</p>
+                <button class="concert-button" data-location="Montevideo - Uruguay" data-variable="septiembre30" onclick="getTickets(this)">Tickets</button>
+            </div>
+        </div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="navbar.js"></script>  
+<script src="tours.js"></script>
+
+    
+</body>
+</html>
