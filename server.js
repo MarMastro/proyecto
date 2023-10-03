@@ -1,7 +1,7 @@
 import express, { json } from "express";
 import mongoose from "mongoose";
 import userRouter from "./rutas/user.rutas.js";
-import albumRouter from "./rutas/album.rutas";
+import albumRouter from "./rutas/album.rutas.js";
 import dotenv from "dotenv"
 const app = express()
 dotenv.config()
