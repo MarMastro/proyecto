@@ -10,7 +10,6 @@ const url = process.env.url
 import path from "path";
 
 app.use("/health", (req, res) => res.sendStatus(200));
-app.use('/', routes);
 
 // const album = require("./models/album")
 // const user = require("./models/user")
