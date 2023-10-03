@@ -6,7 +6,7 @@ import dotenv from "dotenv"
 const app = express()
 dotenv.config()
 const port = process.env.PORT 
-const url = process.env.url
+const url = process.env.URL
 import path from "path";
 
 app.use("/health", (req, res) => res.sendStatus(200));
@@ -23,18 +23,15 @@ app.use("/band", albumRouter);
 
 async function connectToMongo(){
     try{
-        await mongoose.connect(url)
-        app.listen(3000, ()=>{
-            console.log("Server escuchando en puerto 3000 y DB conectada")
-        })
-        
+        await mongoose.connect(url) 
+        app.listen(3000, ()=>{ 
+            console.log('Servidor escuchando en puerto 3000 y Basde de Datos conectada')
+          }) 
     }catch(error){
         console.log(error)
     }
 }
 
 connectToMongo()
-
-
 
 
