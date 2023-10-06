@@ -1,7 +1,6 @@
 import mongoose from "mongoose";
-import validator from "validator";
 
-const albumsCollection = "albums"
+const albumsCollection = "albums";
 
 const album = new mongoose.Schema(
      {
