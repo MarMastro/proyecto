@@ -1,10 +1,10 @@
 import mongoose from "mongoose";
 
-const userCollection = "users"
+const userCollection = "users";
 
 const usuario = new mongoose.Schema(
     {
-        nombre: {type: String, requiere: [true, "Escriba su nombre"], minLength: 2},
+        nombre: {type: String, require: [true, "Escriba su nombre"], minLength: 2},
         apellido: {type: String, require: [true, "Escriba su apellido"], minLength: 2},
         email: {
             type: String,
@@ -22,5 +22,5 @@ const usuario = new mongoose.Schema(
     }
 )
 
-const userModel = mongoose.model(userCollection, usuario)
+const userModel = mongoose.model(userCollection, usuario);
 export default userModel;
