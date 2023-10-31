@@ -15,7 +15,7 @@ app.use("/health", (req, res) => res.sendStatus(200));
 
 app.use(json())
 app.use(express.static(path.join("public")));
-app.use("./user", userRouter);
+app.use("/user", userRouter);
 app.use("/band", albumRouter);
 
 async function connectToMongo(){
