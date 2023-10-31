@@ -20,7 +20,7 @@ app.use("/band", albumRouter);
 
 async function connectToMongo(){
     try{
-        await mongoose.connect(url) 
+        await mongoose.connect("url") 
         app.listen(3000, ()=>{ 
             console.log('Servidor escuchando en puerto 3000 y Basde de Datos conectada')
           }); 
