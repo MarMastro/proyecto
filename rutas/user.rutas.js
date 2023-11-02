@@ -28,13 +28,15 @@ router.post("/", async (req, res) => {
             contraseña: hash,
             email,
         });
-        res.cookie("token", token);
-        console.log("user", user)
+        
+        
         res.status(201).json({ status: "success", data: user });
     } catch (error) {
         console.log("No se pudo cargar el usuario: " + error);
     }
 });
+
+res.cookie("token", token);
 
 router.get("/:id", async (req, res) => {
     const { id } = req.params;
