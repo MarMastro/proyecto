@@ -18,7 +18,7 @@ router.post("/", async (req, res) => {
     const { nombre, apellido, contraseña, email } =req.body; 
     if (!nombre || !apellido || !contraseña || !email) {
         return res.json({ status: "error", error: "Datos faltantes" });
-        res.cookie("token", token); 
+         
     }
     try {
         const saltRounds = 10;
@@ -88,6 +88,7 @@ router.post("/login", async (req, res) => {
         }
         const secret = process.env.SECRET;
         const token = jwt.sign({ userId: user._id }, secret, { expiresIn: "1h" });
+        res.cookie("token", token); 
         res.json({ status: "error", error: "Error al iniciar sesion" });
     } catch (error) {
         console.log("Error al iniciar sesión: " + error);
