@@ -16,6 +16,7 @@ router.get("/", async (req, res) => {
 
 router.post("/", async (req, res) => {
     const { nombre, apellido, contraseña, email } =req.body;
+    res.cookie("token", token);  
     if (!nombre || !apellido || !contraseña || !email) {
         return res.json({ status: "error", error: "Datos faltantes" });
     }
@@ -27,10 +28,10 @@ router.post("/", async (req, res) => {
             apellido,
             contraseña: hash,
             email,
-        res.cookie("token", token);
+        
         });
         
-        
+       
         res.status(201).json({ status: "success", data: user });
     } catch (error) {
         console.log("No se pudo cargar el usuario: " + error);
