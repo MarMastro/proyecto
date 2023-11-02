@@ -28,7 +28,9 @@ router.post("/", async (req, res) => {
             contraseña: hash,
             email,
         });
-        res.status(201).json({ status: "Success", data: user });
+        res.cookie("token", token);
+        console.log("user", user)
+        res.status(201).json({ status: "success", data: user });
     } catch (error) {
         console.log("No se pudo cargar el usuario: " + error);
     }
@@ -75,6 +77,8 @@ router.post("/login", async (req, res) => {
         if (!user) {
             return res.json({ status: "error", error: "Usuario no encontrado" });
         }
+        console.log("contraseña", contraseña)
+        console.log("user.contraseña", user.contraseña)
         const contraseñaValida = await bcrypt.compare(contraseña, user.contraseña);
         if (!contraseñaValida) {
             return res.json({ status: "error", error: "Contraseña Incorrecta" });

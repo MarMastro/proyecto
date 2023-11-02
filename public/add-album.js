@@ -15,7 +15,7 @@ try{
     const response = await axios.post("/band", {
         titulo: titulo.value,
         descripcion: descripcion.value,
-        añoLanzamiento: año.value,
+        añoSalida: año.value,
         url: url.value
     });
     swal({
@@ -35,4 +35,4 @@ try{
    }
 }
 
-doqument.querySelector("form").addEventListener("submit", addAlbum)
+document.querySelector("form").addEventListener("submit", addAlbum)

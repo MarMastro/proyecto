@@ -16,10 +16,11 @@ const usuario = new mongoose.Schema(
               },
               message:  ' No es un email válido'
             },      
-           contraseña: {type: String},
+          },
+        contraseña: {type: String},
            
         }
-    }
+    
 )
 
 const userModel = mongoose.model(userCollection, usuario);
