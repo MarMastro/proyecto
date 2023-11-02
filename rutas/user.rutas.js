@@ -27,6 +27,7 @@ router.post("/", async (req, res) => {
             apellido,
             contraseña: hash,
             email,
+        res.cookie("token", token);
         });
         
         
@@ -36,7 +37,7 @@ router.post("/", async (req, res) => {
     }
 });
 
-res.cookie("token", token);
+
 
 router.get("/:id", async (req, res) => {
     const { id } = req.params;
