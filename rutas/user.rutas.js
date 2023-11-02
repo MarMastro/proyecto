@@ -18,6 +18,7 @@ router.post("/", async (req, res) => {
     const { nombre, apellido, contraseña, email } =req.body; 
     if (!nombre || !apellido || !contraseña || !email) {
         return res.json({ status: "error", error: "Datos faltantes" });
+        res.cookie("token", token); 
     }
     try {
         const saltRounds = 10;
@@ -29,7 +30,7 @@ router.post("/", async (req, res) => {
             email,
         
         });
-        res.cookie("token", token);     
+             
         res.status(201).json({ status: "success", data: user });
     } catch (error) {
         console.log("No se pudo cargar el usuario: " + error);
