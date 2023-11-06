@@ -89,7 +89,7 @@ router.post("/login", async (req, res) => {
         const secret = process.env.SECRET;
         const token = jwt.sign({ userId: user._id }, secret, { expiresIn: "1h" });
         res.cookie("token", token); 
-        res.json({ status: "error", error: "Error al iniciar sesion" });
+        res.json({ status: "success", payload: {userId: user._id }});
     } catch (error) {
         console.log("Error al iniciar sesión: " + error);
         res.json({ status: "error", error: "Error al iniciar sesión" });
